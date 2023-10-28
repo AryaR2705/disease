@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/predict": {"origins": "http://localhost:5173"}})
 
 # Load the trained model
-model = joblib.load('y.pkl')
+model = joblib.load('latest.pkl')
 
 @app.route('/predict', methods=['POST'])
 def predict():
